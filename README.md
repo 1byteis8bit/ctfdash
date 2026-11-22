@@ -10,7 +10,7 @@ cd ctfdash
 ./install.sh
 ```
 
-The installer creates a repository-local virtual environment and links `ctfdash` into `~/.local/bin`. Update with `git pull`; rerun the installer only after moving the repository or changing package metadata.
+The installer creates a repository-local virtual environment, links `ctfdash` into `~/.local/bin`, and persistently adds that directory to `~/.profile` and the active Bash/Zsh startup file. A child installer cannot change the already-running parent shell; when needed it prints the one `export PATH=...` command to run immediately. A newly opened terminal loads it automatically. Update with `git pull`; rerun the installer only after moving the repository or changing package metadata.
 
 ## Create a contest project
 
