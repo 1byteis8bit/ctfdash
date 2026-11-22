@@ -5,7 +5,7 @@
 ## Install from Git
 
 ```bash
-git clone <private-or-local-repository-url> ctfdash
+git clone https://github.com/1byteis8bit/ctfdash.git ctfdash
 cd ctfdash
 ./install.sh
 ```
@@ -17,8 +17,8 @@ The installer creates a repository-local virtual environment and links `ctfdash`
 Run the interactive wizard. Contest settings are deliberately asked as questions rather than command-line flags.
 
 ```bash
-mkdir whitehat-2026
-cd whitehat-2026
+mkdir ctf_name
+cd ctf_name
 ctfdash init
 ```
 
