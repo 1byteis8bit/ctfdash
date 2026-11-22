@@ -10,7 +10,7 @@ cd ctfdash
 ./install.sh
 ```
 
-The installer creates a repository-local virtual environment, links `ctfdash` into `~/.local/bin`, and persistently adds that directory to `~/.profile` and the active Bash/Zsh startup file. A child installer cannot change the already-running parent shell; when needed it prints the one `export PATH=...` command to run immediately. A newly opened terminal loads it automatically. Update with `git pull`; rerun the installer only after moving the repository or changing package metadata.
+The installer creates a repository-local virtual environment and links `ctfdash` into `~/.local/bin`. It also registers that directory in `~/.profile` and the active Bash/Zsh startup file. To make the command work immediately in the shell that launched the installer, it places a second link in an already-active user-writable PATH directory. If none exists, it asks for `sudo` once and uses `/usr/local/bin`. No `source`, `export`, terminal restart, or `hash -r` step is required. Update with `git pull`; rerun the installer only after moving the repository or changing package metadata.
 
 ## Create a contest project
 
